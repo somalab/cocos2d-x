@@ -277,7 +277,6 @@
 		1A31963016C0DDE800207637 /* decode.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A3191B616C0DDE700207637 /* decode.h */; };
 		1A31963116C0DDE800207637 /* encode.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A3191B716C0DDE700207637 /* encode.h */; };
 		1A31963216C0DDE800207637 /* types.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A3191B816C0DDE700207637 /* types.h */; };
-		1A3199AE16C0E3A200207637 /* libwebp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3199AD16C0E3A200207637 /* libwebp.a */; };
 		1A4646DA16DC8FB700DE131F /* ccFPSImages.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A4646D816DC8FB700DE131F /* ccFPSImages.h */; };
 		1A4646DC16DC901A00DE131F /* ccFPSImages.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A4646DB16DC901900DE131F /* ccFPSImages.c */; };
 		1A5428FF1720F0650074EC5C /* CCDataVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A5428FD1720F0650074EC5C /* CCDataVisitor.cpp */; };
@@ -295,6 +294,8 @@
 		37EEEBF9175DDF3A003C1193 /* CCComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 37EEEBF5175DDF3A003C1193 /* CCComponent.h */; };
 		37EEEBFA175DDF3A003C1193 /* CCComponentContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37EEEBF6175DDF3A003C1193 /* CCComponentContainer.cpp */; };
 		37EEEBFB175DDF3A003C1193 /* CCComponentContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 37EEEBF7175DDF3A003C1193 /* CCComponentContainer.h */; };
+		458B7A51180FBC1700A0F9C6 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 458B7A4F180FBC1700A0F9C6 /* libcurl.a */; };
+		458B7A52180FBC1700A0F9C6 /* libwebp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 458B7A50180FBC1700A0F9C6 /* libwebp.a */; };
 		4698CFA9174CBB700066A57B /* CCTextureETC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4698CFA7174CBB700066A57B /* CCTextureETC.cpp */; };
 		4698CFAA174CBB700066A57B /* CCTextureETC.h in Headers */ = {isa = PBXBuildFile; fileRef = 4698CFA8174CBB700066A57B /* CCTextureETC.h */; };
 		469A7DF316C24787006FFCB2 /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 469A7DF116C24787006FFCB2 /* tinyxml2.cpp */; };
@@ -610,6 +611,8 @@
 		37EEEBF5175DDF3A003C1193 /* CCComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCComponent.h; sourceTree = "<group>"; };
 		37EEEBF6175DDF3A003C1193 /* CCComponentContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCComponentContainer.cpp; sourceTree = "<group>"; };
 		37EEEBF7175DDF3A003C1193 /* CCComponentContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCComponentContainer.h; sourceTree = "<group>"; };
+		458B7A4F180FBC1700A0F9C6 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcurl.a; sourceTree = "<group>"; };
+		458B7A50180FBC1700A0F9C6 /* libwebp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwebp.a; sourceTree = "<group>"; };
 		4698CFA7174CBB700066A57B /* CCTextureETC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCTextureETC.cpp; sourceTree = "<group>"; };
 		4698CFA8174CBB700066A57B /* CCTextureETC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTextureETC.h; sourceTree = "<group>"; };
 		469A7DF116C24787006FFCB2 /* tinyxml2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml2.cpp; sourceTree = "<group>"; };
@@ -639,7 +642,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1551A343158F2AB200E66CFE /* Foundation.framework in Frameworks */,
-				1A3199AE16C0E3A200207637 /* libwebp.a in Frameworks */,
+				458B7A52180FBC1700A0F9C6 /* libwebp.a in Frameworks */,
+				458B7A51180FBC1700A0F9C6 /* libcurl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1239,6 +1243,7 @@
 		1A31912016C0DDE700207637 /* third_party */ = {
 			isa = PBXGroup;
 			children = (
+				458B7A4E180FBC1700A0F9C6 /* libraries */,
 				1A3191A716C0DDE700207637 /* ios */,
 			);
 			path = third_party;
@@ -1271,6 +1276,16 @@
 				37EEEBF7175DDF3A003C1193 /* CCComponentContainer.h */,
 			);
 			path = component;
+			sourceTree = "<group>";
+		};
+		458B7A4E180FBC1700A0F9C6 /* libraries */ = {
+			isa = PBXGroup;
+			children = (
+				458B7A4F180FBC1700A0F9C6 /* libcurl.a */,
+				458B7A50180FBC1700A0F9C6 /* libwebp.a */,
+			);
+			name = libraries;
+			path = ios/libraries;
 			sourceTree = "<group>";
 		};
 		469A7DF016C24787006FFCB2 /* tinyxml2 */ = {
@@ -1724,6 +1739,8 @@
 		1551A34D158F2AB200E66CFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				DSTROOT = /tmp/cocos2dx.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cocos2dx-Prefix.pch";
@@ -1738,19 +1755,24 @@
 					"\"$(SRCROOT)/../kazmath/include\"",
 					"\"$(SDKROOT)/usr/include/libxml2\"",
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../platform/third_party/ios/libraries\"",
+					"\\\"$(SRCROOT)/../platform/third_party/ios/libraries\\\"",
+					"/Users/rustray/Develop/c-labs/cocos2d-x/cocos2dx/platform/third_party/ios/libraries",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		1551A34E158F2AB200E66CFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				DSTROOT = /tmp/cocos2dx.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cocos2dx-Prefix.pch";
@@ -1764,13 +1786,16 @@
 					"\"$(SRCROOT)/../kazmath/include\"",
 					"\"$(SDKROOT)/usr/include/libxml2\"",
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../platform/third_party/ios/libraries\"",
+					"\\\"$(SRCROOT)/../platform/third_party/ios/libraries\\\"",
+					"/Users/rustray/Develop/c-labs/cocos2d-x/cocos2dx/platform/third_party/ios/libraries",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
